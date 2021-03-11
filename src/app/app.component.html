@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <div class="row">
+        <h2>Hoy es día: {{diaSemana}}</h2>
+    </div>
+    
+    <h3>Bienvenido a Angular: {{nombre}} {{apellido}}</h3>
+        
+    <h4>La suma es: {{sumar(20,40)/20}}</h4>
+   <!-- INTERPOLACIóN-->
+    <!-- <input type="text" class="form-container" placeholder="{{diaSemana}}"> -->
+    <!-- DATA BINDING-->
+    <input type="text" class="form-container" [placeholder]="mostrarTexto()" [disabled]="activado">
+    <br>
+    <img [src]="rutaImagen" alt="imagen" width="200px" height="150px">
+    <!-- EVENT BINDING-->
+    <h3>{{ textoEventBinding }}</h3>
+    <br>
+    <button class="btn btn-primary" (click)="cambiarTexto()">Presionar el botón</button>
+    
+    <!-- TWO WAY BINDING -->
+    <br>
+    <input type="text" class="form-control" placeholder="Ingrese su nombre aquí" [(ngModel)]="cadenaTwoWayBinding">
+    <br>
+    {{cadenaTwoWayBinding}}
+</div>
+
